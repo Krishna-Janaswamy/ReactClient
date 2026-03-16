@@ -1,0 +1,83 @@
+{
+  "info": {
+    "name": "RestClient Demo",
+    "_postman_id": "d9d27a5d-3cb9-4e96-8af4-706dd1aa3c8f",
+    "description": "Postman collection for the Spring Boot RestClient demo application.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Posts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/posts",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "posts"
+          ]
+        },
+        "description": "Returns the list of posts fetched through Spring RestClient."
+      },
+      "response": []
+    },
+    {
+      "name": "Get Post By Id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/posts/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "posts",
+            "1"
+          ]
+        },
+        "description": "Returns one post by id through Spring RestClient."
+      },
+      "response": []
+    },
+    {
+      "name": "Create Post",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": 1,\n  \"title\": \"RestClient demo\",\n  \"body\": \"Created through Postman\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/posts",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "posts"
+          ]
+        },
+        "description": "Creates a sample post through the local Spring Boot API."
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    }
+  ]
+}

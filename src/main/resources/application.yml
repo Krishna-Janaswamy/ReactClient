@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: restclient-demo
+
+server:
+  port: 8080
+
+client:
+  jsonplaceholder:
+    base-url: https://jsonplaceholder.typicode.com
